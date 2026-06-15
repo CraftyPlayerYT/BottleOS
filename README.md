@@ -74,19 +74,31 @@ Whether you want to fix a bug, improve documentation, suggest a feature, or writ
 
 ```
 BottleOS/
-├── README.md         # You are here
-├── Rules.md          # Contribution rules — read before contributing
-├── LICENSE           # GNU General Public License v3.0
-├── kernel/           # Core kernel source
-├── shell/            # Terminal and shell
-├── packages/         # Package manager
-├── editions/         # Edition-specific configurations
-│   ├── student/
-│   ├── individual/
-│   ├── ai/
-│   └── enterprise/
-└── docs/             # Documentation
+├── README.md             # You are here
+├── Rules.md              # Contribution rules — read before contributing
+├── LICENSE               # GNU General Public License v3.0
+│
+├── kernel/               # 🧠 Core kernel — shared by all editions
+│   ├── core/
+│   ├── drivers/
+│   └── memory/
+│
+├── student/              # 🎓 BottleOS Student = Kernel + Student layer
+│   └── ...
+│
+├── individual/           # 👤 BottleOS Individual = Kernel + Individual layer
+│   └── ...
+│
+├── ai/                   # 🤖 BottleOS AI = Kernel + AI layer
+│   └── ...
+│
+├── enterprise/           # 🏢 BottleOS Enterprise = Kernel + Enterprise layer
+│   └── ...
+│
+└── docs/                 # Documentation
 ```
+
+> Every edition is built **on top of the same kernel**. The kernel is the common foundation — editions only add their own layer of features and configurations.
 
 ---
 
